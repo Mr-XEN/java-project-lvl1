@@ -29,5 +29,7 @@ application {
 dependencies {
 
 }
-
+run {
+    standardInput = System.in
+}
 
