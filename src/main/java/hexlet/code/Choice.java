@@ -7,12 +7,17 @@ public class Choice {
                 System.exit(0);
                 break;
             case 1:
-                Cli.getNameFromConsole();
+                Greeting.getNameFromConsole();
                 break;
             case 2:
-                Cli.getNameFromConsole();
-                System.out.println("cheburek");
+                System.out.println("Welcome to the Brain Games!");
+                Greeting.getNameFromConsole();
+                Logic.evenOdd();
                 break;
+            default:
+                System.exit(0);
+                break;
+
         }
     }
 }
