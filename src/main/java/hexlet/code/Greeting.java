@@ -11,9 +11,7 @@ public class Greeting {
         System.out.print("May I have your name? ");
         setName(in.next());
         System.out.println("Hello, " + name + "!");
-//        in.close();
         return getName();
-
     }
 
     public static String getName() {

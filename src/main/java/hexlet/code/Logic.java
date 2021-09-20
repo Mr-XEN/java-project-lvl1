@@ -34,7 +34,6 @@ public class Logic {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         for (int i = 0; i < count; i++) {
             int number = randomInt();
-            boolean test;
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             getAnswerFromCli();
