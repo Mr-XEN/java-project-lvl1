@@ -1,9 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
 import hexlet.code.games.Gcd;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 public class Choice {
     public static void choice(int input) {
@@ -12,6 +13,7 @@ public class Choice {
         final int answer3 = 3;
         final int answer4 = 4;
         final int answer5 = 5;
+        final int answer6 = 6;
         switch (input) {
             case answer1:
                 Greeting.getNameFromConsole();
@@ -35,6 +37,11 @@ public class Choice {
                 System.out.println("Welcome to the Brain Games!");
                 Greeting.getNameFromConsole();
                 Progression.game();
+                break;
+            case answer6:
+                System.out.println("Welcome to the Brain Games!");
+                Greeting.getNameFromConsole();
+                Prime.game();
                 break;
             case 0:
             default:
