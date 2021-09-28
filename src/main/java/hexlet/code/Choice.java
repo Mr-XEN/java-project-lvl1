@@ -2,6 +2,8 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
 
 public class Choice {
     public static void choice(int input) {
@@ -23,6 +25,16 @@ public class Choice {
                 System.out.println("Welcome to the Brain Games!");
                 Greeting.getNameFromConsole();
                 Calc.game();
+                break;
+            case answer4:
+                System.out.println("Welcome to the Brain Games!");
+                Greeting.getNameFromConsole();
+                Gcd.game();
+                break;
+            case answer5:
+                System.out.println("Welcome to the Brain Games!");
+                Greeting.getNameFromConsole();
+                Progression.game();
                 break;
             case 0:
             default:
