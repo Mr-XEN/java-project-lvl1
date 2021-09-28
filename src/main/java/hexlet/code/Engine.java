@@ -19,7 +19,6 @@ public class Engine {
     public static void setStringFromCli() {
         Scanner input = new Scanner(System.in);
         stringFromCli = input.next();
-//        return getStringFromCli();
     }
 
     public static int setIntFromCli() {

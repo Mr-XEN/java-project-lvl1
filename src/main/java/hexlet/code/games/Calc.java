@@ -48,10 +48,6 @@ public class Calc {
         return res;
     }
 
-    public static void generateNumbers() {
-
-    }
-
     public static String question() {
         return getNumber1() + " " + getOperatorToString() + " " + getNumber2();
     }
