@@ -3,7 +3,7 @@
 
 [![Java CI](https://github.com/Mr-XEN/java-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/Mr-XEN/java-project-lvl1/actions/workflows/main.yml)
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+<a href="https://codeclimate.com/github/Mr-XEN/java-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/8fe065e194c6d37c5ba2/maintainability" /></a>
 
 [![asciicast](https://asciinema.org/a/M1WZbLl1kOovDKtAZLNfl0aFL.svg)](https://asciinema.org/a/M1WZbLl1kOovDKtAZLNfl0aFL)
 
