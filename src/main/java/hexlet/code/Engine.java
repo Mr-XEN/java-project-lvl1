@@ -6,26 +6,19 @@ import java.util.Scanner;
 public class Engine {
 
     private static String stringFromCli;
-    private static int intFromCli;
 
     public static String getStringFromCli() {
         return stringFromCli;
     }
 
-    public static int getIntFromCli() {
-        return intFromCli;
-    }
+
 
     public static void setStringFromCli() {
         Scanner input = new Scanner(System.in);
         stringFromCli = input.next();
     }
 
-    public static int setIntFromCli() {
-        Scanner input = new Scanner(System.in);
-        Engine.intFromCli = input.nextInt();
-        return getIntFromCli();
-    }
+
 
     public static int getRandomInt(int startRange, int endRange) {
         int diff = endRange - startRange;
