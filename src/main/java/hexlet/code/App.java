@@ -1,10 +1,11 @@
 package hexlet.code;
 
 import hexlet.code.games.Even;
-import hexlet.code.games.Gcd;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
+//import hexlet.code.games.Gcd;
+//import hexlet.code.games.Calc;
+//import hexlet.code.games.Progression;
+//import hexlet.code.games.Prime;
+
 import java.util.Scanner;
 
 public class App {
@@ -24,6 +25,8 @@ public class App {
         choice(input.nextInt());
 
         System.out.println("Congratulations, " + Greeting.getName() + "!");
+
+
     }
 
 
@@ -43,26 +46,26 @@ public class App {
                 Greeting.getNameFromConsole();
                 Even.game();
                 break;
-            case answer3:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Calc.game();
-                break;
-            case answer4:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Gcd.game();
-                break;
-            case answer5:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Progression.game();
-                break;
-            case answer6:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Prime.game();
-                break;
+//            case answer3:
+//                System.out.println("Welcome to the Brain Games!");
+//                Greeting.getNameFromConsole();
+//                Calc.game();
+//                break;
+//            case answer4:
+//                System.out.println("Welcome to the Brain Games!");
+//                Greeting.getNameFromConsole();
+//                Gcd.game();
+//                break;
+//            case answer5:
+//                System.out.println("Welcome to the Brain Games!");
+//                Greeting.getNameFromConsole();
+//                Progression.game();
+//                break;
+//            case answer6:
+//                System.out.println("Welcome to the Brain Games!");
+//                Greeting.getNameFromConsole();
+//                Prime.game();
+//                break;
             case 0:
             default:
                 System.exit(0);

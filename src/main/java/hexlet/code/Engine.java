@@ -5,20 +5,10 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static String stringFromCli;
-
-    public static String getStringFromCli() {
-        return stringFromCli;
-    }
-
-
-
-    public static void setStringFromCli() {
+    public static String setStringFromCli() {
         Scanner input = new Scanner(System.in);
-        stringFromCli = input.next();
+        return input.next();
     }
-
-
 
     public static int getRandomInt(int startRange, int endRange) {
         int diff = endRange - startRange;
@@ -26,19 +16,23 @@ public class Engine {
         return random.nextInt(diff + 1) + startRange;
     }
 
-    public static void logic(String question, String answer) {
+    public static void logic(String rules, String[] question, String[] answer) {
+        final int count = 3;
+        System.out.println(rules);
+        for (int i = 0; i < count; i++) {
 
-        System.out.println("Question: " + question);
-        System.out.print("Your answer: ");
-        Engine.setStringFromCli();
-        if (getStringFromCli().equals(answer)) {
-            System.out.println("Correct!");
-        } else {
-            System.out.print("'" + getStringFromCli() + "'" + " is wrong answer ;(. Correct answer was " + "'");
-            System.out.println(answer + "'.");
-            System.out.println("Let's try again, " + Greeting.getName() + "!");
-            System.exit(0);
+            System.out.println("Question: " + question[i]);
+            System.out.print("Your answer: ");
+            String inputString = Engine.setStringFromCli();
+
+            if (inputString.equals(answer[i])) {
+                System.out.println("Correct!");
+            } else {
+                System.out.print("'" + inputString + "'" + " is wrong answer ;(. Correct answer was " + "'");
+                System.out.println(answer[i] + "'.");
+                System.out.println("Let's try again, " + Greeting.getName() + "!");
+                System.exit(0);
+            }
         }
-
     }
 }
