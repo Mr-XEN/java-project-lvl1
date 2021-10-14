@@ -30,6 +30,7 @@ public class Prime {
             } else {
                 answer = "yes";
             }
+
         }
         return answer;
     }
