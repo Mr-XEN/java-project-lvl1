@@ -22,11 +22,15 @@ public class Prime {
     }
 
     private static String prime(int num) {
+
+        String answer = "";
         for (int i = 2; i < num; i++) {
             if (num % i == 0) {
-                return "no";
+                answer = "no";
+            } else {
+                answer = "yes";
             }
         }
-        return "yes";
+        return answer;
     }
 }
