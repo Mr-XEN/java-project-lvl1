@@ -7,7 +7,7 @@ public class Prime {
     public static void game() {
 
         final int count = 3;
-        final int start = 0;
+        final int start = 2;
         final int finish = 100;
         final String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[] questionArr = new String[count];
@@ -27,10 +27,10 @@ public class Prime {
         for (int i = 2; i < num; i++) {
             if (num % i == 0) {
                 answer = "no";
+                break;
             } else {
                 answer = "yes";
             }
-
         }
         return answer;
     }
