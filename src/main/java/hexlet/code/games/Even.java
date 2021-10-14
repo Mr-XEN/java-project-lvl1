@@ -4,14 +4,8 @@ import hexlet.code.Engine;
 
 public class Even {
 
-    public static String answer(int input) {
-        if (input % 2 == 0) {
-            return "yes";
-        }
-        return "no";
-    }
-
     public static void game() {
+
         final int count = 3;
         final int start = 0;
         final int finish = 100;
@@ -26,5 +20,12 @@ public class Even {
             answerArr[i] = answer;
         }
         Engine.logic(rules, questionArr, answerArr);
+    }
+
+    private static String answer(int input) {
+        if (input % 2 == 0) {
+            return "yes";
+        }
+        return "no";
     }
 }

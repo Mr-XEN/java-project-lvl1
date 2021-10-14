@@ -1,44 +1,32 @@
-//package hexlet.code.games;
-//
-//import hexlet.code.Engine;
-//
-//public class Prime {
-//
-//    private static int startNumber;
-//    private static String answer;
-//    private static String question;
-//
-//    public static void game() {
-//
-//        final int count = 3;
-//        final int start = 0;
-//        final int finish = 100;
-//
-//        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-//
-//        for (int i = 0; i < count; i++) {
-//            setStartNumber(Engine.getRandomInt(start, finish));
-//            prime(startNumber);
-//            Engine.logic(question, answer);
-//        }
-//    }
-//
-//    public static void prime(int num) {
-//        for (int i = 2; i < num; i++) {
-//            if (num % i == 0) {
-//                answer = "no";
-//                question = Integer.toString(startNumber);
-//                break;
-//            }
-//            answer = "yes";
-//            question = Integer.toString(startNumber);
-//        }
-//    }
-//
-//    public static void setStartNumber(int num) {
-//        Prime.startNumber = num;
-//    }
-//
-//
-//
-//}
+package hexlet.code.games;
+
+import hexlet.code.Engine;
+
+public class Prime {
+
+    public static void game() {
+
+        final int count = 3;
+        final int start = 0;
+        final int finish = 100;
+        final String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        String[] questionArr = new String[count];
+        String[] answerArr = new String[count];
+
+        for (int i = 0; i < count; i++) {
+            int question = Engine.getRandomInt(start, finish);
+            questionArr[i] = Integer.toString(question);
+            answerArr[i] = prime(question);
+        }
+        Engine.logic(rules, questionArr, answerArr);
+    }
+
+    private static String prime(int num) {
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return "no";
+            }
+        }
+        return "yes";
+    }
+}
