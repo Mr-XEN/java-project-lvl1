@@ -7,7 +7,7 @@ public class Calc {
 
     private static final String RULES = "What is the result of the expression?";
 
-    public static void game() {
+    public static void run() {
 
         final int endRangeForOperator = 2;
         String[] question = new String[Engine.ROUND_COUNTER];

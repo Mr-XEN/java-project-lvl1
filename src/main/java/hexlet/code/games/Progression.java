@@ -7,7 +7,7 @@ public class Progression {
 
     private static final String RULES = "What number is missing in the progression?";
 
-    public static void game() {
+    public static void run() {
 
         final int startRangeForStep = 1;
         final int endRangeForStep = 10;

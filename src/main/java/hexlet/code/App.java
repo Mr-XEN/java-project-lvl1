@@ -30,11 +30,11 @@ public class App {
         switch (input) {
             case ("0") -> System.exit(0);
             case ("1") -> Engine.getNameFromConsole();
-            case ("2") -> Even.game();
-            case ("3") -> Calc.game();
-            case ("4") -> Gcd.game();
-            case ("5") -> Progression.game();
-            case ("6") -> Prime.game();
+            case ("2") -> Even.run();
+            case ("3") -> Calc.run();
+            case ("4") -> Gcd.run();
+            case ("5") -> Progression.run();
+            case ("6") -> Prime.run();
             default -> {
             }
         }

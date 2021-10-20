@@ -7,7 +7,7 @@ public class Even {
 
     private static final String RULES = "Answer 'yes' if number even otherwise answer 'no'.";
 
-    public static void game() {
+    public static void run() {
 
         String[] question = new String[Engine.ROUND_COUNTER];
         String[] answer = new String[Engine.ROUND_COUNTER];

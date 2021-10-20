@@ -7,7 +7,7 @@ public class Prime {
 
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static void game() {
+    public static void run() {
 
         String[] question = new String[Engine.ROUND_COUNTER];
         String[] answer = new String[Engine.ROUND_COUNTER];
@@ -27,6 +27,6 @@ public class Prime {
                 return false;
             }
         }
-        return true;
+        return (num > 1);
     }
 }

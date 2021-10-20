@@ -7,7 +7,7 @@ public class Gcd {
 
     private static final String RULES = "Find the greatest common divisor of given numbers.";
 
-    public static void game() {
+    public static void run() {
 
         String[] question = new String[Engine.ROUND_COUNTER];
         String[] answer = new String[Engine.ROUND_COUNTER];
