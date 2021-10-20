@@ -1,34 +1,33 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Progression {
 
+    private static final String RULES = "What number is missing in the progression?";
+
     public static void game() {
 
-        final int count = 3;
-        final int start = 0;
-        final int finish = 100;
-        final int startCountForStep = 1;
-        final int finishCountForStep = 10;
-        final int startCountForLength = 5;
-        final int finishCountForLength = 20;
-        final String rules = "What number is missing in the progression?";
-        String[] questionArr = new String[count];
-        String[] answerArr = new String[count];
+        final int startRangeForStep = 1;
+        final int endRangeForStep = 10;
+        final int startRangeForLength = 5;
+        final int endRangeForLength = 20;
+        String[] question = new String[Engine.ROUND_COUNTER];
+        String[] answer = new String[Engine.ROUND_COUNTER];
 
-        for (int i = 0; i < count; i++) {
-            int startNumber = Engine.getRandomInt(start, finish);
-            int step = Engine.getRandomInt(startCountForStep, finishCountForStep);
-            int length = Engine.getRandomInt(startCountForLength, finishCountForLength);
-            int hiddenNumber = Engine.getRandomInt(start, length);
-            questionArr[i] = progression(startNumber, step, length, hiddenNumber);
-            answerArr[i] = answer(startNumber, step, length, hiddenNumber);
+        for (int i = 0; i < Engine.ROUND_COUNTER; i++) {
+            int startNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
+            int step = Utils.getRandomIntInRange(startRangeForStep, endRangeForStep);
+            int length = Utils.getRandomIntInRange(startRangeForLength, endRangeForLength);
+            int hiddenNumber = Utils.getRandomIntInRange(Utils.START_RANGE, length);
+            question[i] = buildProgression(startNumber, step, length, hiddenNumber);
+            answer[i] = calculateHiddenElement(startNumber, step, length, hiddenNumber);
         }
-        Engine.logic(rules, questionArr, answerArr);
+        Engine.runLogic(RULES, question, answer);
     }
 
-    private static String progression(int startNumber, int step, int length, int hiddenNumber) {
+    private static String buildProgression(int startNumber, int step, int length, int hiddenNumber) {
 
         StringBuilder progression = new StringBuilder();
         int tempNumber = startNumber;
@@ -44,7 +43,7 @@ public class Progression {
         return progression.toString();
     }
 
-    private static String answer(int startNumber, int step, int length, int hiddenNumber) {
+    private static String calculateHiddenElement(int startNumber, int step, int length, int hiddenNumber) {
 
         int tempNumber = startNumber;
         String answer = "";

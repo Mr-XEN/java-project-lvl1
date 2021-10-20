@@ -8,6 +8,5 @@ public class Cli {
         System.out.print("May I have your name? ");
         String name = in.next();
         System.out.println("Hello, " + name + "!");
-//        in.close();
     }
 }

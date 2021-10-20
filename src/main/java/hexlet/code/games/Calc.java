@@ -1,27 +1,26 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
 
+    private static final String RULES = "What is the result of the expression?";
+
     public static void game() {
 
-        final int count = 3;
-        final int start = 0;
-        final int finish = 100;
-        final int finishForOperator = 2;
-        final String rules = "What is the result of the expression?";
-        String[] questionArr = new String[count];
-        String[] answerArr = new String[count];
+        final int endRangeForOperator = 2;
+        String[] question = new String[Engine.ROUND_COUNTER];
+        String[] answer = new String[Engine.ROUND_COUNTER];
 
-        for (int i = 0; i < count; i++) {
-            int firstNumber = Engine.getRandomInt(start, finish);
-            int secondNumber = Engine.getRandomInt(start, finish);
-            int operator = Engine.getRandomInt(start, finishForOperator);
-            questionArr[i] = firstNumber + " " + getOperation(operator) + " " + secondNumber;
-            answerArr[i] = Integer.toString(getResultOfCalc(firstNumber, secondNumber, operator));
+        for (int i = 0; i < Engine.ROUND_COUNTER; i++) {
+            int firstNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
+            int secondNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
+            int operator = Utils.getRandomIntInRange(Utils.START_RANGE, endRangeForOperator);
+            question[i] = firstNumber + " " + getOperation(operator) + " " + secondNumber;
+            answer[i] = Integer.toString(getResultOfCalc(firstNumber, secondNumber, operator));
         }
-        Engine.logic(rules, questionArr, answerArr);
+        Engine.runLogic(RULES, question, answer);
     }
 
     private static String getOperation(int input) {

@@ -1,27 +1,26 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Gcd {
 
+    private static final String RULES = "Find the greatest common divisor of given numbers.";
+
     public static void game() {
 
-        final int count = 3;
-        final int start = 0;
-        final int finish = 100;
-        final String rules = "Find the greatest common divisor of given numbers.";
-        String[] questionArr = new String[count];
-        String[] answerArr = new String[count];
-        for (int i = 0; i < count; i++) {
-            int firstNumber = Engine.getRandomInt(start, finish);
-            int secondNumber = Engine.getRandomInt(start, finish);
-            questionArr[i] = firstNumber + " " + secondNumber;
-            answerArr[i] = Integer.toString(gcd(firstNumber, secondNumber));
+        String[] question = new String[Engine.ROUND_COUNTER];
+        String[] answer = new String[Engine.ROUND_COUNTER];
+        for (int i = 0; i < Engine.ROUND_COUNTER; i++) {
+            int firstNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
+            int secondNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
+            question[i] = firstNumber + " " + secondNumber;
+            answer[i] = Integer.toString(findGcd(firstNumber, secondNumber));
         }
-        Engine.logic(rules, questionArr, answerArr);
+        Engine.runLogic(RULES, question, answer);
     }
 
-    private static int gcd(int a, int b) {
+    private static int findGcd(int a, int b) {
         while (a != 0 && b != 0) {
             int c = b;
             b = a % b;

@@ -22,52 +22,21 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner input = new Scanner(System.in);
-        choice(input.nextInt());
-        System.out.println("Congratulations, " + Greeting.getName() + "!");
+        runGame(input.next());
     }
 
-    private static void choice(int input) {
-
-        final int answer1 = 1;
-        final int answer2 = 2;
-        final int answer3 = 3;
-        final int answer4 = 4;
-        final int answer5 = 5;
-        final int answer6 = 6;
+    private static void runGame(String input) {
 
         switch (input) {
-            case answer1:
-                Greeting.getNameFromConsole();
-                break;
-            case answer2:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Even.game();
-                break;
-            case answer3:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Calc.game();
-                break;
-            case answer4:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Gcd.game();
-                break;
-            case answer5:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Progression.game();
-                break;
-            case answer6:
-                System.out.println("Welcome to the Brain Games!");
-                Greeting.getNameFromConsole();
-                Prime.game();
-                break;
-            case 0:
-            default:
-                System.exit(0);
-                break;
+            case ("0") -> System.exit(0);
+            case ("1") -> Engine.getNameFromConsole();
+            case ("2") -> Even.game();
+            case ("3") -> Calc.game();
+            case ("4") -> Gcd.game();
+            case ("5") -> Progression.game();
+            case ("6") -> Prime.game();
+            default -> {
+            }
         }
     }
 }
