@@ -9,15 +9,15 @@ public class Even {
 
     public static void run() {
 
-        String[] question = new String[Engine.ROUND_COUNTER];
-        String[] answer = new String[Engine.ROUND_COUNTER];
+        String[] questions = new String[Engine.ROUND_COUNTER];
+        String[] answers = new String[Engine.ROUND_COUNTER];
 
         for (int i = 0; i < Engine.ROUND_COUNTER; i++) {
             int number = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
-            question[i] = Integer.toString(number);
-            answer[i] = isEven(number) ? "yes" : "no";
+            questions[i] = Integer.toString(number);
+            answers[i] = isEven(number) ? "yes" : "no";
         }
-        Engine.runLogic(RULES, question, answer);
+        Engine.runLogic(RULES, questions, answers);
     }
 
     private static boolean isEven(int input) {

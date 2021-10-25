@@ -28,8 +28,7 @@ public class App {
     private static void runGame(String input) {
 
         switch (input) {
-            case ("0") -> System.exit(0);
-            case ("1") -> Engine.getNameFromConsole();
+            case ("1") -> Cli.greeting();
             case ("2") -> Even.run();
             case ("3") -> Calc.run();
             case ("4") -> Gcd.run();

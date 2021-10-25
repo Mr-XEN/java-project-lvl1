@@ -10,17 +10,17 @@ public class Calc {
     public static void run() {
 
         final int endRangeForOperator = 2;
-        String[] question = new String[Engine.ROUND_COUNTER];
-        String[] answer = new String[Engine.ROUND_COUNTER];
+        String[] questions = new String[Engine.ROUND_COUNTER];
+        String[] answers = new String[Engine.ROUND_COUNTER];
 
         for (int i = 0; i < Engine.ROUND_COUNTER; i++) {
             int firstNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
             int secondNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
             int operator = Utils.getRandomIntInRange(Utils.START_RANGE, endRangeForOperator);
-            question[i] = firstNumber + " " + getOperation(operator) + " " + secondNumber;
-            answer[i] = Integer.toString(getResultOfCalc(firstNumber, secondNumber, operator));
+            questions[i] = firstNumber + " " + getOperation(operator) + " " + secondNumber;
+            answers[i] = Integer.toString(getResultOfCalc(firstNumber, secondNumber, operator));
         }
-        Engine.runLogic(RULES, question, answer);
+        Engine.runLogic(RULES, questions, answers);
     }
 
     private static String getOperation(int input) {

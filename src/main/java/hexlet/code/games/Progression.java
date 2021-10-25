@@ -13,18 +13,18 @@ public class Progression {
         final int endRangeForStep = 10;
         final int startRangeForLength = 5;
         final int endRangeForLength = 20;
-        String[] question = new String[Engine.ROUND_COUNTER];
-        String[] answer = new String[Engine.ROUND_COUNTER];
+        String[] questions = new String[Engine.ROUND_COUNTER];
+        String[] answers = new String[Engine.ROUND_COUNTER];
 
         for (int i = 0; i < Engine.ROUND_COUNTER; i++) {
             int startNumber = Utils.getRandomIntInRange(Utils.START_RANGE, Utils.END_RANGE);
             int step = Utils.getRandomIntInRange(startRangeForStep, endRangeForStep);
             int length = Utils.getRandomIntInRange(startRangeForLength, endRangeForLength);
             int hiddenNumber = Utils.getRandomIntInRange(Utils.START_RANGE, length);
-            question[i] = buildProgression(startNumber, step, length, hiddenNumber);
-            answer[i] = calculateHiddenElement(startNumber, step, length, hiddenNumber);
+            questions[i] = buildProgression(startNumber, step, length, hiddenNumber);
+            answers[i] = calculateHiddenElement(startNumber, step, length, hiddenNumber);
         }
-        Engine.runLogic(RULES, question, answer);
+        Engine.runLogic(RULES, questions, answers);
     }
 
     private static String buildProgression(int startNumber, int step, int length, int hiddenNumber) {
